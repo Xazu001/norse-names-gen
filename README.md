@@ -19,7 +19,7 @@ The application uses data scraped from a website about Nordic names, allowing it
 
 1. **Clone the repository**:
    ```
-   git clone https://github.com/your-repository.git
+   git clone https://github.com/Xazu001/norse-names-gen.git
    ```
 
 2. **Install dependencies**:
