@@ -16,6 +16,7 @@ export default function PageTransitionWrapper({
         initial={{ opacity: 0, y: 5 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
+          delay: 0.5,
           duration: 0.5,
           type: "spring",
           damping: 20,

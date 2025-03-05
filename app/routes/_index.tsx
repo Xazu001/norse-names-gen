@@ -7,6 +7,7 @@ import {
   useRevalidator,
   useNavigate,
   useLocation,
+  useNavigation,
 } from "@remix-run/react";
 import { useState, useEffect } from "react";
 import { FaHeart } from "react-icons/fa6";

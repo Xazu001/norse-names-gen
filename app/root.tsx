@@ -8,10 +8,13 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import tailwind from "./tailwind.css?url";
+import loaderStyle from "./styles/loaders/main.css?url";
 import PageTransitionWrapper from "./components/base/PageTransitionWrapper";
+import { useEffect, useState } from "react";
 
 export const links: LinksFunction = () => [
   ...(tailwind ? [{ rel: "stylesheet", href: tailwind }] : []),
+  ...(loaderStyle ? [{ rel: "stylesheet", href: loaderStyle }] : []),
   {
     rel: "icon",
     href: "/favicon.ico",
@@ -36,6 +39,14 @@ export const meta: MetaFunction = () => [
 ];
 
 export default function Layout() {
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoaded(true);
+    }, 400);
+  }, []);
+
   return (
     <html lang="en">
       <head>
@@ -45,6 +56,7 @@ export default function Layout() {
         <Links />
       </head>
       <body className="overflow-hidden bg">
+        {!loaded && <Loader />}
         <PageTransitionWrapper>
           <Outlet />
         </PageTransitionWrapper>
@@ -53,5 +65,13 @@ export default function Layout() {
         <Scripts />
       </body>
     </html>
+  );
+}
+
+function Loader() {
+  return (
+    <div className="z-50 fixed flex justify-center items-center bg-bg w-full h-full">
+      <div className="loader"></div>
+    </div>
   );
 }

@@ -1,0 +1,24 @@
+/* HTML: <div class="loader"></div> */
+.loader {
+  display: inline-grid;
+}
+.loader:before,
+.loader:after {
+  content: "";
+  height: 27px;
+  aspect-ratio: 5;
+  --c: #127cea 90deg,#101014 0;
+  background:
+   conic-gradient(from 135deg at top   ,var(--c)),
+   conic-gradient(from -45deg at bottom,var(--c)) 12.5% 100%;
+  background-size: 20% 50%;
+  background-repeat: repeat-x;
+  clip-path: inset(0 100% 0 0);
+  animation: l9 1s infinite linear;
+}
+.loader:after {
+  scale: -1 1;
+}
+@keyframes l9{
+  90%,to {clip-path: inset(0)}
+}
