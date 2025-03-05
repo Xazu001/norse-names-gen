@@ -3,6 +3,37 @@
 @tailwind utilities;
 
 @layer base {
+.better-scrollbar {
+  --sb-track-color: #369ef0;
+  --sb-thumb-color: #2f2f2f;
+  --sb-size: 7px;
+}
+
+.better-scrollbar::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+.better-scrollbar::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 24px;
+}
+
+.better-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 24px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  .better-scrollbar {
+      scrollbar-color: var(--sb-thumb-color)
+                     var(--sb-track-color);
+  }
+}
+
+.bg{
+  background-image: url("/public//img/bg.png")
+}
+
   html,
   body {
     @apply font-main text-light;

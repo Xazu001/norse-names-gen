@@ -34,8 +34,8 @@ export default {
       screens: ["920px"],
     },
     fontFamily: {
-      main: ["Roboto", "Arial", "system-ui"],
-      header: ["Syne", "Arial", "system-ui"],
+      main: ["Space Mono", "Arial", "system-ui"],
+      header: ["Space Mono", "Arial", "system-ui"],
       runes: ["Noto Sans Runic", "Arial", "system-ui"],
     },
     colors: {
@@ -47,33 +47,22 @@ export default {
 
       // Main Others
       // ----- Items
-      "item-1": "#292931",
-      "item-1h": "#444449",
-      "item-1a": "#444449",
-      "item-2": "#35353d",
-      "item-2h": "#4a4a51",
-      "item-2a": "#4a4a51",
-      "item-3": "#2d2d31",
+      "item-1": "#127cea",
+      "item-1h": "#369ef0",
+      "item-1a": "#369ef0",
+      "item-2": "#6bb9f0",
+      "item-2h": "#8cd2f7",
 
       // ----- Accents
-      "accent--2": "#acc507",
-      "accent--1t": "#c1dd089f",
-      "accent--1": "#c1dd08",
-      "accent-1": "#d0f009",
-      "accent-1h": "#dff83a",
+      "accent-1": "#2f2f2f",
+      "accent-1h": "#2f2f2f",
 
       // ----- Accents - Shadows
-      "s-accent-1": "#d0f0092f",
-
-      // ----- Alts
-      "alt-1": "#FF1493",
+      "s-accent-1": "#2f2f2f2f",
 
       // ----- Borders
       "border-1": "#4f4f4f6f",
       "alt-border-1": "#333333",
-
-      // ----- infos
-      "alert-1": "#e70000",
     },
     extend: {
       padding: {

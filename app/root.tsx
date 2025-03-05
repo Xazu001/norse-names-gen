@@ -1,3 +1,4 @@
+import { MetaFunction } from "@remix-run/react";
 import type { LinksFunction } from "@remix-run/cloudflare";
 import {
   Links,
@@ -7,6 +8,7 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import tailwind from "./tailwind.css?url";
+import PageTransitionWrapper from "./components/base/PageTransitionWrapper";
 
 export const links: LinksFunction = () => [
   ...(tailwind ? [{ rel: "stylesheet", href: tailwind }] : []),
@@ -23,9 +25,16 @@ export const links: LinksFunction = () => [
   },
   {
     rel: "stylesheet",
-    href: "https://fonts.googleapis.com/css2?family=Noto+Sans+Runic&display=swap",
+    href: "https://fonts.googleapis.com/css2?family=Noto+Sans+Runic&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap",
   },
 ];
+
+export const meta: MetaFunction = () => [
+  {
+    title: "Norse Names",
+  },
+];
+
 export default function Layout() {
   return (
     <html lang="en">
@@ -35,8 +44,11 @@ export default function Layout() {
         <Meta />
         <Links />
       </head>
-      <body className="bg-bg">
-        <Outlet />
+      <body className="overflow-hidden bg">
+        <PageTransitionWrapper>
+          <Outlet />
+        </PageTransitionWrapper>
+
         <ScrollRestoration />
         <Scripts />
       </body>
