@@ -219,7 +219,7 @@ export default function Index() {
             </button>
           </div>
           <div className="flex justify-center pt-8">
-            <strong className="text-8xl">
+            <strong className="font-runes text-8xl">
               {genders.find((el) => el.value === gender)?.icon}
             </strong>
           </div>
