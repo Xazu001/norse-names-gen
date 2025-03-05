@@ -5,7 +5,7 @@
 
 **Nordic Name Generator** to aplikacja internetowa, która generuje losowe nordyckie imiona. Aplikacja oferuje użytkownikom możliwość wyboru płci imienia (męskie, żeńskie, bezpłciowe) oraz wyświetlania odpowiednich run dla wygenerowanego imienia.
 
-Aplikacja wykorzystuje dane zebrane z strony o nordyckich imionach, umożliwiając generowanie nazw wraz z ich znaczeniem. Imiona są przypisane do trzech kategorii: **męskie**, **żeńskie** i **beznadziejne** (unisex). Dodatkowo, aplikacja umożliwia wyświetlanie imienia w formie run.
+Aplikacja wykorzystuje dane zebrane z strony o nordyckich imionach, umożliwiając generowanie nazw wraz z ich znaczeniem. Imiona są przypisane do trzech kategorii: **męskie**, **żeńskie** i **unisex**. Dodatkowo, aplikacja umożliwia wyświetlanie imienia w formie run.
 
 ## Funkcje
 
@@ -38,23 +38,8 @@ Aplikacja wykorzystuje dane zebrane z strony o nordyckich imionach, umożliwiaj�
    yarn dev
    ```
 
-4. **Uruchomienie w produkcji**:
-   Aby uruchomić aplikację w trybie produkcyjnym:
-   ```
-   npm run build
-   npm run start
-   # lub
-   yarn build
-   yarn start
-   ```
-
 ## Technologie
 
 - **React**: Używane do budowy interfejsu użytkownika.
 - **Remix**: Framework do tworzenia aplikacji webowych.
-- **Cheerio**: Do skrobania danych z HTML.
-- **Runy**: Zamiana imienia na jego runiczną formę.
-
-## Licencja
-
-Ten projekt jest dostępny na licencji MIT. Zobacz [LICENSE](LICENSE) w celu uzyskania szczegółowych informacji.
+- **Cheerio**: Do scrapowania danych z HTML.
